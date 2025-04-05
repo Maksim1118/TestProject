@@ -3,7 +3,6 @@
 #include "StateMachine.h"
 #include "WaitingAction.h"
 
-
 ShowingWin::ShowingWin()
 	:m_EndShow(false)
 {
@@ -21,5 +20,5 @@ void ShowingWin::update(BarabanManager& barabanManager, float diff)
 void ShowingWin::changeState(StateMachine& stateMachine)
 {
 	if (m_EndShow)
-		stateMachine.setState(make_unique<WaitingAction>());
+		stateMachine.setState(std::make_unique<WaitingAction>());
 }

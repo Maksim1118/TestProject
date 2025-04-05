@@ -16,7 +16,7 @@ struct Stats
 
 class BarabanManager {
 public:
-    BarabanManager(int countBarabans, int countObjects, Vector2f size);
+    BarabanManager(int countBarabans, int countObjects, sf::Vector2f size);
     enum class States
     {
         Wait,
@@ -38,16 +38,16 @@ public:
     void setDecelerating();
     void startSpin();
 
-    Vector2f getSize() const;
+    sf::Vector2f getSize() const;
     Stats getStats() const;
     States getState() const;
 
     bool stopSpinStatus();
-    void draw(RenderTarget& target);
+    void draw(sf::RenderTarget& target);
     void update(float diff);
 
 private:
-    void fillListBarabans(int countBarabans, int countObjects, Vector2f size);
+    void fillListBarabans(int countBarabans, int countObjects, sf::Vector2f size);
     void collectingCombination(int index);
     bool checkWin(int index);
     void showWinDelay(float diff);
@@ -61,8 +61,8 @@ private:
     Stats m_Stats;
     States m_State;
     StatesShowWin m_StateShowWin;
-    vector<Baraban> m_Barabans;
-    vector<pair<Combination,vector<Vector2f>>> m_Combinations;
-    RenderTexture m_Mask;
-    vector<RectangleShape> m_Lines;
+    std::vector<Baraban> m_Barabans;
+    std::vector<std::pair<Combination,std::vector<sf::Vector2f>>> m_Combinations;
+    sf::RenderTexture m_Mask;
+    std::vector<sf::RectangleShape> m_Lines;
 };

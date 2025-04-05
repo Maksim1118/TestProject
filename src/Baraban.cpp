@@ -4,6 +4,9 @@
 #include <iostream>
 #include <cmath>
 
+using namespace sf;
+using namespace std;
+
 Baraban::Baraban(int numObjects, Vector2f size, Vector2f pos)
 	:m_CountSymbols(numObjects), m_Size(size), m_Pos(pos), m_V(0.f),
 	m_PosY(0.f), m_A(0.f), m_SymbolSize(0.f), m_State(States::Stop)

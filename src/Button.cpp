@@ -2,6 +2,9 @@
 
 #include <stdexcept>
 
+using namespace sf;
+using namespace std;
+
 Button::Button(const wstring text)
 {
 

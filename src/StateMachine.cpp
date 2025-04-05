@@ -6,6 +6,8 @@
 #include <random>
 #include <iostream>
 
+using namespace std;
+
 StateMachine::StateMachine(BarabanManager& barabanManager)
 	: m_BarabanManager(barabanManager), m_CurrentState(nullptr)
 {

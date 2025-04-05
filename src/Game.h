@@ -6,8 +6,6 @@
 #include "BarabanManager.h"
 #include "Button.h"
 #include "StateMachine.h"
-using namespace std;
-using namespace sf;
 
 constexpr size_t windowWidth = 1920;
 constexpr size_t windowHeight = 1080;
@@ -23,7 +21,7 @@ class Game
 public:
 	Game();
 	void run();
-	static vector<pair<Combination, unsigned int>> m_WinCombinations;
+	static std::vector<std::pair<Combination, unsigned int>> m_WinCombinations;
 private:
 	void events();
 	void draw();
@@ -35,10 +33,10 @@ private:
 	Button m_ButStop;
     StateMachine m_StateMachine;
 
-	Font m_Font;
-	Text m_BalanceText;
-	Text m_WinText;
-	RenderWindow window;
-    Clock m_Clock;
+	sf::Font m_Font;
+	sf::Text m_BalanceText;
+	sf::Text m_WinText;
+	sf::RenderWindow window;
+    sf::Clock m_Clock;
 };
 

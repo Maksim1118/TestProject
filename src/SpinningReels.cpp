@@ -28,5 +28,5 @@ void SpinningReels::stopPressed()
 void SpinningReels::changeState(StateMachine& stateMachine)
 {
 	if(m_EndSpin)
-		stateMachine.setState(make_unique<ShowingWin>());
+		stateMachine.setState(std::make_unique<ShowingWin>());
 }

@@ -3,6 +3,7 @@
 #include <iostream>
 #define PI 3.1415926535897f
 
+using namespace sf;
 
 Symbol::Symbol(Type type, Vector2f pos, float size)
 	:m_Type(type), m_Position(pos), m_Size(size)

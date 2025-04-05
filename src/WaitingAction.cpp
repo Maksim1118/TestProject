@@ -21,5 +21,5 @@ void WaitingAction::startPressed()
 void WaitingAction::changeState(StateMachine& stateMachine)
 {
 	if(m_StartPressed)
-		stateMachine.setState(make_unique<SpinningReels>());
+		stateMachine.setState(std::make_unique<SpinningReels>());
 }

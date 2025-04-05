@@ -6,7 +6,7 @@
 
 int main() 
 {
-    auto game = make_unique<Game>();
+    auto game = std::make_unique<Game>();
     game->run();
     return 0;
 }

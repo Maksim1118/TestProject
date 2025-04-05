@@ -10,11 +10,10 @@ public:
 
 	void start();
 	void stop();
-
-	void setState(unique_ptr<State> newState);
+	void setState(std::unique_ptr<State> newState);
 	void update(float diff);
 private:
-	unique_ptr<State> m_CurrentState;
+	std::unique_ptr<State> m_CurrentState;
 	BarabanManager& m_BarabanManager;
 };
 

@@ -1,5 +1,7 @@
 #include "Combination.h"
 
+using namespace std;
+
 Combination::Combination()
 {
 

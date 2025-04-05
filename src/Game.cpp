@@ -1,6 +1,9 @@
 #include "Game.h"
 #include <stdexcept>
 
+using namespace sf;
+using namespace std;
+
 Game::Game()
 	:window(VideoMode(windowWidth, windowHeight), "SlotGame", Style::Titlebar | Style::Close), m_BarabanManager(numBarabans, numSymbols, Vector2f(barabanWidth, barabanHeight))
     , m_StateMachine(m_BarabanManager), m_ButStart(L"start"),m_ButStop(L"stop"), m_Clock()

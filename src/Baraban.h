@@ -4,8 +4,6 @@
 
 #include "Symbol.h"
 #include "Combination.h"
-using namespace sf;
-using namespace std;
 
 constexpr float thickness = 5.f;
 constexpr float spacing = 20.f;
@@ -14,7 +12,7 @@ constexpr float maxSpeed = 30.0f;
 class Baraban
 {
 public:
-	Baraban(int numShapes, Vector2f size, Vector2f pos);
+	Baraban(int numShapes, sf::Vector2f size, sf::Vector2f pos);
 	enum class States
 	{
 		Accelerating,
@@ -24,16 +22,16 @@ public:
 	};
 
 	void update(float diff);
-	void draw(RenderTarget& target);
+	void draw(sf::RenderTarget& target);
 	void startSpin();
 	void setDeceleratingStatus();
 
 	bool getStopSpinStatus() const;
-	Vector2f getSize() const;
+	sf::Vector2f getSize() const;
 	int getCountElements() const;
-	Vector2f getPosition() const;
+	sf::Vector2f getPosition() const;
 	/*States getState() const;*/
-	vector<Symbol> getListSymbols() const; 
+	std::vector<Symbol> getListSymbols() const;
 private:
 	void generateSymbols();
 	void generateAcceleration();
@@ -46,7 +44,7 @@ private:
 	void correctPos(float diff);
 	void updatePosition(float speed);
 
-	vector<Symbol> m_Symbols;
+	std::vector<Symbol> m_Symbols;
 	float m_V;
 	float m_A;
 	float m_PosY;
@@ -55,8 +53,8 @@ private:
 	int m_CountSymbols;
 	States m_State;
 
-	RectangleShape m_Shape;
-	Vector2f m_Size;
-	Vector2f m_Pos;
+	sf::RectangleShape m_Shape;
+	sf::Vector2f m_Size;
+	sf::Vector2f m_Pos;
 };
 
